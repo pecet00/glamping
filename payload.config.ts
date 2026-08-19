@@ -4,9 +4,13 @@ import { sqliteAdapter } from "@payloadcms/db-sqlite";
 import { Users } from "./collections/Users";
 import { Extras } from "./collections/Extras";
 
+const payloadSecret = process.env.PAYLOAD_SECRET;
+
+if (!payloadSecret) {
+  throw new Error("PAYLOAD_SECRET is missing");
+}
 export default buildConfig({
-  secret:
-    process.env.PAYLOAD_SECRET,
+  secret:payloadSecret,
 
   admin: {
     user: Users.slug,
