@@ -1,11 +1,13 @@
 import { buildConfig } from "payload";
 import { sqliteAdapter } from "@payloadcms/db-sqlite";
 
-import { Users } from "./collections/Users.ts";
-import { Extras } from "./collections/Extras.ts";
+import { Users } from "./collections/Users";
+import { Extras } from "./collections/Extras";
 
 export default buildConfig({
-  secret: process.env.PAYLOAD_SECRET,
+  secret:
+    process.env.PAYLOAD_SECRET ||
+    "",
 
   admin: {
     user: Users.slug,
