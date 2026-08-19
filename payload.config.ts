@@ -6,8 +6,7 @@ import { Extras } from "./collections/Extras";
 
 export default buildConfig({
   secret:
-    process.env.PAYLOAD_SECRET ||
-    "",
+    process.env.PAYLOAD_SECRET,
 
   admin: {
     user: Users.slug,
