@@ -8,9 +8,19 @@ export const Extras: CollectionConfig = {
   },
 
   access: {
-    // Publiczna strona odczytuje aktywne dodatki wyłącznie przez /api/extras.
+    // Publiczna strona może pobrać wyłącznie aktywne dodatki.
     create: ({ req }) => Boolean(req.user),
-    read: ({ req }) => Boolean(req.user),
+    read: ({ req }) => {
+      if (req.user) {
+        return true;
+      }
+
+      return {
+        active: {
+          equals: true,
+        },
+      };
+    },
     update: ({ req }) => Boolean(req.user),
     delete: ({ req }) => Boolean(req.user),
   },
