@@ -6,6 +6,7 @@ import Configurator from "@/components/Configurator";
 import Gallery from "@/components/Gallery";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Business from "@/components/Business";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
         <ProductSection />
 
         <Configurator />
+
+        <Business />
 
         <Gallery />
 

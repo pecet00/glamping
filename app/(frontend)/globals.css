@@ -3099,3 +3099,440 @@ body[data-mode="biz"] .build-panel .section-head {
     order: 3;
   }
 }
+.glamping-configurator__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.glamping-configurator__modal {
+  position: relative;
+
+  width: min(100%, 520px);
+
+  padding: 40px;
+
+  background: #f5f1e8;
+  color: #1d241c;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.glamping-configurator__modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.glamping-configurator__modal h3 {
+  margin: 12px 0 16px;
+
+  font-size: 32px;
+  line-height: 1.05;
+}
+
+.glamping-configurator__modal p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.glamping-configurator__modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glamping-configurator__modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glamping-configurator__modal input[type="email"] {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid #c9c3b7;
+
+  background: white;
+
+  font: inherit;
+}
+
+.glamping-configurator__consent {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 10px !important;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.glamping-configurator__consent input {
+  margin-top: 3px;
+}
+
+.glamping-configurator__modal form > button,
+.glamping-configurator__success button {
+  padding: 15px 20px;
+
+  border: 0;
+
+  background: #1d241c;
+  color: white;
+
+  font: inherit;
+  cursor: pointer;
+}
+
+.glamping-configurator__modal form > button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.glamping-configurator__error {
+  margin: 0 !important;
+  color: #a32626;
+  font-size: 14px;
+}
+
+.glamping-configurator__success {
+  text-align: center;
+}
+
+.glamping-configurator__success > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 42px;
+}
+.glamping-business {
+  position: relative;
+  padding: 140px 0;
+  background: #e9e4d8;
+  color: #20261f;
+  overflow: hidden;
+}
+
+.glamping-business__inner {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+.glamping-business__content {
+  max-width: 570px;
+}
+
+.glamping-business__eyebrow {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.glamping-business h2 {
+  margin: 0 0 30px;
+
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.glamping-business h2 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.glamping-business__lead {
+  margin-bottom: 20px;
+
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.glamping-business__content > p:not(.glamping-business__lead) {
+  margin-bottom: 35px;
+
+  max-width: 520px;
+
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.glamping-business__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 18px 22px;
+
+  background: #20261f;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.glamping-business__button:hover {
+  transform: translateY(-2px);
+  background: #30382e;
+}
+
+.glamping-business__button span:last-child {
+  font-size: 20px;
+}
+
+.glamping-business__visual {
+  position: relative;
+  min-height: 620px;
+}
+
+.glamping-business__image {
+  position: absolute;
+  inset: 0 70px 70px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6f765f,
+      #31382e
+    );
+}
+
+.glamping-business__image-placeholder {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.glamping-business__image-placeholder span {
+  margin-bottom: 14px;
+
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+.glamping-business__image-placeholder strong {
+  max-width: 280px;
+
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.glamping-business__card {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 320px;
+
+  padding: 30px;
+
+  background: #f5f1e8;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.16);
+}
+
+.glamping-business__card > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.glamping-business__card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.glamping-business__card li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+
+  padding: 15px 0;
+
+  border-top: 1px solid #d7d1c5;
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.glamping-business__card li span {
+  font-size: 11px;
+  opacity: 0.45;
+}
+
+.glamping-business__bottom {
+  width: min(1200px, calc(100% - 48px));
+  margin: 90px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(32, 38, 31, 0.2);
+}
+
+.glamping-business__bottom > div {
+  padding: 25px 25px 0 0;
+
+  border-right: 1px solid rgba(32, 38, 31, 0.2);
+}
+
+.glamping-business__bottom > div:not(:first-child) {
+  padding-left: 25px;
+}
+
+.glamping-business__bottom > div:last-child {
+  border-right: 0;
+}
+
+.glamping-business__bottom strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+.glamping-business__bottom span {
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .glamping-business {
+    padding: 90px 0;
+  }
+
+  .glamping-business__inner {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .glamping-business__content {
+    max-width: none;
+  }
+
+  .glamping-business__visual {
+    min-height: 520px;
+  }
+
+  .glamping-business__bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .glamping-business__bottom > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .glamping-business__bottom > div:nth-child(3),
+  .glamping-business__bottom > div:nth-child(4) {
+    border-top: 1px solid rgba(32, 38, 31, 0.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .glamping-business__inner,
+  .glamping-business__bottom {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .glamping-business h2 {
+    font-size: 45px;
+  }
+
+  .glamping-business__lead {
+    font-size: 18px;
+  }
+
+  .glamping-business__visual {
+    min-height: 470px;
+  }
+
+  .glamping-business__image {
+    inset: 0 25px 70px 0;
+  }
+
+  .glamping-business__card {
+    width: calc(100% - 25px);
+    padding: 24px;
+  }
+
+  .glamping-business__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .glamping-business__bottom > div,
+  .glamping-business__bottom > div:not(:first-child) {
+    padding: 20px 0;
+
+    border-right: 0;
+    border-top: 1px solid rgba(32, 38, 31, 0.2);
+  }
+
+  .glamping-business__bottom > div:first-child {
+    border-top: 0;
+  }
+}
