@@ -1,15 +1,19 @@
 {
   "name": "glamping",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "payload migrate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "payload:generate-types": "payload generate:types",
+    "payload:migrate:create": "payload migrate:create",
+    "payload:migrate": "payload migrate"
   },
   "dependencies": {
-    "@payloadcms/db-sqlite": "^3.88.0",
+    "@payloadcms/db-postgres": "^3.88.0",
     "@payloadcms/next": "^3.88.0",
     "@payloadcms/richtext-lexical": "^3.88.0",
     "next": "16.3.1",

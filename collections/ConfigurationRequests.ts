@@ -14,7 +14,8 @@ export const ConfigurationRequests: CollectionConfig = {
   },
 
   access: {
-    create: () => true,
+    // Publiczne formularze korzystają z kontrolowanego Route Handlera.
+    create: () => false,
     read: ({ req }) => Boolean(req.user),
     update: ({ req }) => Boolean(req.user),
     delete: ({ req }) => Boolean(req.user),

@@ -16,10 +16,8 @@ export const ContactRequests: CollectionConfig = {
   },
 
   access: {
-    // Formularz publiczny może utworzyć zgłoszenie
-    create: () => true,
-
-    // Odczyt tylko po zalogowaniu do panelu
+    // Publiczne formularze korzystają z kontrolowanego Route Handlera.
+    create: () => false,
     read: ({ req }) => Boolean(req.user),
 
     update: ({ req }) => Boolean(req.user),

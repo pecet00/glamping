@@ -7,6 +7,14 @@ export const Extras: CollectionConfig = {
     useAsTitle: "label",
   },
 
+  access: {
+    // Publiczna strona odczytuje aktywne dodatki wyłącznie przez /api/extras.
+    create: ({ req }) => Boolean(req.user),
+    read: ({ req }) => Boolean(req.user),
+    update: ({ req }) => Boolean(req.user),
+    delete: ({ req }) => Boolean(req.user),
+  },
+
   fields: [
     {
       name: "id",
